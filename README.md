@@ -1,6 +1,7 @@
 # PostalCodes
 
-TODO: Write a gem description
+A gem to provide details related to postal code(country, state, locality, calling_code, country_code)
+Currently it is having data only for India.I will be updating for more countries as well
 
 ## Installation
 
@@ -18,7 +19,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To Find information of postal code :
+	PostalCodes.find_all(110094)
+
+It will return the Hash:
+	{"country"=>{"name"=>"India", "calling_code"=>"+91", "alpha_2_code"=>"IN", "alpha_3_code"=>"IND", "numeric_code"=>"356"}, "state"=>"DELHI", "locality"=>"New Delhi"}
 
 ## Contributing
 
