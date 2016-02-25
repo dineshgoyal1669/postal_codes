@@ -16,11 +16,11 @@ module PostalCodes
   end
 
   def self.find_all(postal_code)
-    start = Time.now
     list = self.data
+	final_result = Array.new
     list.each do |country,data|
+	  result = Hash.new
       postcodes = []
-      result = Hash.new
       data['states'].keys.each do |state|
         if !data['states'][state][postal_code].nil?
           result['country'] = data['country']
@@ -29,8 +29,11 @@ module PostalCodes
           break
         end
       end
-      return result
+	  final_result << result if result.size > 0
     end
+	return final_result
   end
 end
+
+p PostalCodes.find_all(110001)
 
