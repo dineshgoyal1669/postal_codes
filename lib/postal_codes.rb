@@ -35,5 +35,4 @@ module PostalCodes
   end
 end
 
-p PostalCodes.find_all(110001)
 
