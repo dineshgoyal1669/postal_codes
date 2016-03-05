@@ -38,7 +38,7 @@ In rare case if a postal code present in more than one country then it will disp
 First Load will take time to load. If using Rails, you can load the hash on app startup for production and staging.	
 
 	# config/initializers/postal_codes_load.rb
-	PostalCodes.load unless Rails.env.development?
+	PostalCodes.data unless Rails.env.development?
 	
 
 ## Contributing
