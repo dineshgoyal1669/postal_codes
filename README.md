@@ -27,11 +27,19 @@ To Find information of postal code :
 
 It will return the array of Hash:
 
-	[{"country"=>{"name"=>"India", "calling_code"=>"+91", "alpha_2_code"=>"IN", "alpha_3_code"=>"IND", "numeric_code"=>"356"}, "state"=>"DELHI", "locality"=>"New Delhi"}]
-	
+	[{"country"=>{"name"=>"India", "calling_code"=>"+91", "alpha_2_code"=>"IN", "alpha_3_code"=>"IND", "numeric_code"=>"356"}, "state"=>"DELHI", "locality"=>"Dayalpur,Khazuri Khas,Sabhapur,Gokal Puri,Johripur"}]
+
+locality contains the comma separated list of localities which comes under given postal_code.
+
 In rare case if a postal code present in more than one country then it will display result as follows :
 
 	[{"country"=>{"name"=>"India", "calling_code"=>"+91", "alpha_2_code"=>"IN", "alpha_3_code"=>"IND", "numeric_code"=>"356"},"state"=>"DELHI", "locality"=>"New Delhi"}, {"country"=>{"name"=>"USA","calling_code"=>"+1","alpha_2_code"=>"US", "alpha_3_code"=>"USA", "numeric_code"=>"840"},"state"=>"Alabama", "locality"=>"Moody"}]
+	
+First Load will take time to load. If using Rails, you can load the hash on app startup for production and staging.	
+
+	# config/initializers/postal_codes_load.rb
+	PostalCodes.load unless Rails.env.development?
+	
 
 ## Contributing
 
