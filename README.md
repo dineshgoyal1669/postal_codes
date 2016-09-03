@@ -21,9 +21,13 @@ Or install it yourself as:
 
 ## Usage
 
-To Find information of postal code :
+To Find information of postal code(Numeric only) :
 
-	PostalCodes.find_all(110094)
+	PostalCodes.find_all(110094) OR PostalCodes.find_all("110094")
+	
+To Find information of postal code(Alphanumeric) :
+
+	PostalCodes.find_all("110094")	
 
 It will return the array of Hash:
 

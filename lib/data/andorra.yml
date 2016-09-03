@@ -1,0 +1,15 @@
+country:   
+  name: 'Andorra'
+  calling_code: '+376'
+  alpha_2_code: 'AD'
+  alpha_3_code: 'AND'
+  numeric_code: '020'
+states:
+  Andorra:
+    AD100: Canillo
+    AD200: Encamp
+    AD300: Ordino
+    AD400: La Massana
+    AD500: Andorra la Vella
+    AD600: Sant Julià de Lòria
+    AD700: Escaldes-Engordany

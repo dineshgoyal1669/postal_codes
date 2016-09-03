@@ -17,6 +17,7 @@ module PostalCodes
 
   def self.find_all(postal_code)
     list = self.data
+	postal_code = postal_code.to_i if postal_code.to_i.to_s == postal_code
 	final_result = Array.new
     list.each do |country,data|
 	  result = Hash.new
